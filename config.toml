@@ -23,7 +23,7 @@ publishDir = "public"
   HeaderHostname = "navdevl.xyz"
   Email = "naveendurai19@gmail.com"
   About = "the Rebel. the God. Me."
-  ProfilePicture = "/static/img/profile_picture.jpg"
+  ProfilePicture = "static/img/profile_picture.jpg"
 
 ## Main Menu
 [[menu.main]]
