@@ -5,7 +5,7 @@ title = "Naveen Honest Raj"
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
-theme = "hugo-theme-nix"
+theme = "nix"
 staticDir = ["static"]
 
 
