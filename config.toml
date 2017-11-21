@@ -5,27 +5,25 @@ title = "Naveen Honest Raj"
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
-theme = "hugo-sustain"
+theme = "hugo-theme-nix"
 publishDir = "public"
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
 
 [params]
-  avatar = "profile.png"
-  author = "Naveen Honest Raj"
-  description = "the Rebel"
-
-  # Custom assets can be linked with their paths relative to static/
-  custom_css = []
-  custom_js  = []
-
-[params.social]
-  Github        = "navdevl"
-  Email         = "naveendurai19@gmail.com"
-  Twitter       = "navdevl"
-  LinkedIn      = ""
-  Stackoverflow = ""
+  GithubID = "navdevl"
+  TwitterID = "navdevl"
+  LinkedInID = "your_linkedin"
+  GoogleplusID = ""
+  FacebookID = "navdevl"
+  InstagramID = "nav_devl"
+  Name = "Naveen Honest Raj"
+  HeaderUsername = "navdevl"
+  HeaderHostname = "navdevl.xyz"
+  Email = "naveendurai19@gmail.com"
+  About = "the Rebel. the God. Me."
+  ProfilePicture = "/static/img/profile_picture.jpg"
 
 ## Main Menu
 [[menu.main]]
