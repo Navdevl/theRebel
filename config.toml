@@ -1,3 +1,10 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "navdevl.xyz"
+title = "theRebel"
+
+theme = "hello-programmer"
+
+paginate = 2
+
+[author]
+    name = "Naveen Honest Raj K`"
+    email = "naveendurai19@gmail.com"
