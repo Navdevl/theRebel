@@ -6,8 +6,7 @@ disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 theme = "hugo-theme-nix"
-publishDir = "public"
-staticDir = ["static", ""]
+staticDir = ["static"]
 
 
 [permalinks]
