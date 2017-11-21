@@ -1,10 +1,44 @@
 baseurl = "navdevl.xyz"
-title = "theRebel"
+languageCode = "en-US"
+title = "Naveen Honest Raj"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
 
-theme = "hello-programmer"
+[permalinks]
+  post = "/:year/:month/:day/:slug"
 
-paginate = 2
+[params]
+  avatar = "profile.png"
+  author = "Naveen Honest Raj"
+  description = "the Rebel"
 
-[author]
-    name = "Naveen Honest Raj K`"
-    email = "naveendurai19@gmail.com"
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "navdevl"
+  Email         = "naveendurai19@gmail.com"
+  Twitter       = "navdevl"
+  LinkedIn      = ""
+  Stackoverflow = ""
+
+## Main Menu
+[[menu.main]]
+  name = "blog"
+  weight = 100
+  identifier = "blog"
+  url = "/blog/"
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"
+[[menu.main]]
+  name = "resume"
+  identifier = "resume"
+  weight = 300
+  url = "/resume/"
