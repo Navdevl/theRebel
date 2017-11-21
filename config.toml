@@ -7,13 +7,15 @@ disqusShortname = ""
 googleAnalytics = ""
 theme = "hugo-theme-nix"
 publishDir = "public"
+staticDir = ["static", ""]
+
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
 
 [params]
   GithubID = "navdevl"
-  TwitterID = "navdevl"
+  TwitterID = "nav_devl"
   LinkedInID = "your_linkedin"
   GoogleplusID = ""
   FacebookID = "navdevl"
