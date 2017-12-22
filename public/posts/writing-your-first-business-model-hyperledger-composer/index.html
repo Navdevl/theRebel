@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://navdevl.xyzimages/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Writing your first Business Model in Hyperledger Composer"/>
+  <meta name="twitter:description" content="This article focuses on creating a simple business model that helps you with visualizing the abstract nature of Hyperledger Composer’s language."/>
+  
+    <meta name="twitter:site" content="@nav_devl"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Naveen Honest Raj"/>
+  
+
+
+
+		
+		<meta name="author" content="Naveen Honest Raj">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.31" />
+		<title>Writing your first Business Model in Hyperledger Composer &middot; NavDevl</title>
+		<link rel="shortcut icon" href="https://navdevl.xyzimages/favicon.ico">
+		<link rel="stylesheet" href="https://navdevl.xyzcss/style.css">
+		<link rel="stylesheet" href="https://navdevl.xyzcss/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://navdevl.xyzcss/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://navdevl.xyz'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://navdevl.xyzposts'>Articles</a>
+	
+	<a href='https://navdevl.xyzabout'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Writing your first Business Model in Hyperledger Composer
+                    </h1>
+                    <h2 class="headline">
+                    Dec 15, 2017
+                    · 1137 words
+                    · 6 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://navdevl.xyztags/hyperledger">hyperledger</a>
+                          
+                              <a href="https://navdevl.xyztags/composer">composer</a>
+                          
+                              <a href="https://navdevl.xyztags/fabric">fabric</a>
+                          
+                              <a href="https://navdevl.xyztags/blockchain">blockchain</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-business-network-definition">What is Business Network Definition?</a></li>
+<li><a href="#understanding-the-key-concepts-of-a-model">Understanding The Key Concepts Of A Model</a></li>
+<li><a href="#resources-are-everything-in-a-cto-file">Resources Are Everything In A CTO File</a></li>
+<li><a href="#the-endless-possibilities-of-the-cto-file">The Endless Possibilities Of The CTO File</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<p>This article focuses on creating a simple business model that helps you with visualizing the abstract nature of Hyperledger Composer’s language.</p>
+
+<p>If you are confused on where to start or wasted a lot of your time in getting started with Hyperledger Composer, you should read this article. My co-worker, Varun has explained it in such a simple way that anyone can understand it.</p>
+
+<h2 id="what-is-business-network-definition">What is Business Network Definition?</h2>
+
+<p>The Business Network Definition is the core definition that holds the Hyperledger Composer’s programming model. In short, it controls the model definition, the relationship between them, the access control over them and the actions that could be performed on/with them.</p>
+
+<p>BND has three core components :</p>
+
+<ol>
+<li>The Model written in .cto files</li>
+<li>The Business Logic written in .js files</li>
+<li>The Access Control Logic written in .acl files</li>
+</ol>
+
+<p>(Optional) There is a Query file written in .qry files that help us to query over the persistent DB.</p>
+
+<p>These three components are easy to maintain and they govern our whole business application on the Composer.</p>
+
+<p>Let’s see how to write a manageable simple model file that helps anyone understand most of our business logic. We will implement this in the business logic file.</p>
+
+<h2 id="understanding-the-key-concepts-of-a-model">Understanding The Key Concepts Of A Model</h2>
+
+<p>Before writing our own model, let us understand the key concepts of it. In a model file, you will be defining the following,</p>
+
+<ol>
+<li>A namespace
+namespace org.skcript.svr</li>
+<li>Resources, which includes
+
+<ol>
+<li>Participants</li>
+<li>Assets</li>
+<li>Transactions</li>
+<li>Events</li>
+</ol></li>
+<li>Optional import statements that are used to inherit or import other model files.</li>
+</ol>
+
+<h2 id="resources-are-everything-in-a-cto-file">Resources Are Everything In A CTO File</h2>
+
+<p>A ‘Participant’ denotes the person who does the action (in simple terms). This is to whom the ID is issued and this is the one who performs transactions.</p>
+
+<p>For example: Consider the example</p>
+
+<pre><code>participant Author identified by id {
+    o Integer id
+    o String name
+    o String email
+    o String specialized_in 
+    o Double age
+}
+</code></pre>
+
+<p>In the above example, we see there’s a participant named <code>Author</code> and the keyword <code>identified by</code> is used to select the primary key. Here, it is <code>id</code> field that acts as a primary key. We will know the wide applications of having this <code>identified by</code> on right field to have an easy and readable access to the model.</p>
+
+<p>The circles are nothing but lower case ‘o’ (The O, yeah ! ).  Composer’s model file has a unique way of representing a new key in their object. But you will get used to it.</p>
+
+<p>Assets are the resource which our business model has. Considering our above example, <code>Author</code> is a participant, then <code>Post</code> will be the asset that he holds. And we know that every post will always belong to an author. There can never be an asset that won’t belong to an author. This can be done by creating a relationship between our participant and asset. This is easy-peasy because of the CTO’s modeling language.</p>
+
+<p>P.S. You should be careful with relationship because it is unidirectional and you can’t do the vice versa which you can do in most of the application frameworks.</p>
+
+<p>Example:</p>
+
+<pre><code>/**
+* An enumerated type
+*/
+enum Category {
+  o AI
+  o BLOCKCHAIN
+  o WEB-DEVELOPMENT
+  o BACKEND
+  o DESIGN
+  o FUN
+}
+
+/**
+ * A post asset.
+ */
+asset Post identified by id {
+  o String id
+  o String title
+  o Category category
+  o DateTime timestamp
+  --&gt; Author author
+  --&gt; Author coAuthor optional
+}
+</code></pre>
+
+<p>In the above example, as we learned earlier <code>identified by</code> is used with <code>id</code> as primary key which makes sense. Right? Now you can understand.</p>
+
+<p>But where’s the new thing coming up? No rush. Let’s take it slow.
+Let’s see the <code>Line 21</code> - we see an arrow. Okay. I didn’t write it because it looks good on the code and it’s not a comment too. That’s again our Composer’s modeling language’s weird way of writing relationship. So we should read it as Post belongs to Author. That’s simple. Done.
+In <code>Line 22</code> , we can see there’s a new keyword <code>optional</code>. This helps us avoid mandatory entry to create an asset. This is defined as optional by thinking that there may or may not be a coauthor for a particular post.</p>
+
+<p>Next, why <code>enum</code> ? It’s for managing a neat code. As our articles goal is not only to learn how to write a model but also to write a good one that can be easy to read and update.
+So enum holds the possible values our field can take. So we defined an <code>enum</code> called <code>Category</code> and we gave it all the possible values it can take. Now in <code>Line 19</code> we used it and created a category of <code>enum Category</code> .</p>
+
+<p>Transactions are the process in which our participants do the operation on assets. Considering our scenario, author creating a post is also a transaction.
+Example:</p>
+
+<pre><code>transaction createPost {
+  --&gt; Author owner
+  o String title
+  o Category category
+}
+</code></pre>
+
+<p>The above transaction definition emphasizes that we are creating a post by pointing out the author of the post. We also provide title and category while creating the post.</p>
+
+<p>P.S: In our next post, we will learn more about the transactions and transaction processor functions.</p>
+
+<p>Events are used to trigger some other third party application. You can write the logic for the event which will help you to send an email about the author’s new post. These events can be used to help you to send emails if and only if you subscribed to the particular author which helps to avoid spam and improves integrity. Events are also defined the same as transactions. The purpose is only different. Used with <code>event</code> keyword for declaration.</p>
+
+<h2 id="the-endless-possibilities-of-the-cto-file">The Endless Possibilities Of The CTO File</h2>
+
+<p>You can still segregate the model declaration by <code>abstract</code>  keyword which won’t create participant or asset in the registry, rather is used to inherit from the other resources.</p>
+
+<p>Example: Considering the same scenario, try to understand the following code</p>
+
+<pre><code>abstract Participant UserInformation identified by name {
+  o String name
+  o String address
+  o String email
+  o Integer age
+}
+
+participant Author identified by id {
+    o Integer id
+    o String specialized_in 
+    o UserInformation user_information
+}
+</code></pre>
+
+<p>We created an <code>abstract</code> participant which holds most information about a user and we inherit and use that in our <code>Author</code> participant. This helps us have a clean model that still maintains Single Responsibility Principle. We can do abstract type for assets and transactions too.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>There are much more magical things like <code>extends</code> that we can do with CTO file. But let’s end it clean and easy here. After you write your first model, you will figure out most of the conventions you might need to follow to have a maintainable code. Wish you a good luck, readers.</p>
+
+<p>If you have any difficulties in writing your own model, feel free to email me at naveen@skcript.com.</p>
+
+                </section>
+            </article>
+
+            
+                
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/navdevl" target="_blank">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/navdevl" target="_blank">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/nav_devl" target="_blank">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> Naveen Honest Raj
+    
+    </p>
+    <p class="small">
+    </p>
+
+</footer>
+
+        </section>
+
+        <script src="https://navdevl.xyzjs/jquery-2.2.4.min.js"></script>
+<script src="https://navdevl.xyzjs/main.js"></script>
+<script src="https://navdevl.xyzjs/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://navdevl.xyz/posts/writing-your-first-business-model-hyperledger-composer/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/about/</loc>
+    <lastmod>1996-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/blockchain/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/composer/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/fabric/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/hyperledger/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/posts/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/</loc>
+    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

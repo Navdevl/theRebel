@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fabric on NavDevl</title>
+    <link>https://navdevl.xyz/tags/fabric/</link>
+    <description>Recent content in Fabric on NavDevl</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://navdevl.xyz/tags/fabric/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Writing your first Business Model in Hyperledger Composer</title>
+      <link>https://navdevl.xyz/posts/writing-your-first-business-model-hyperledger-composer/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://navdevl.xyz/posts/writing-your-first-business-model-hyperledger-composer/</guid>
+      <description>This article focuses on creating a simple business model that helps you with visualizing the abstract nature of Hyperledger Composer’s language.
+If you are confused on where to start or wasted a lot of your time in getting started with Hyperledger Composer, you should read this article. My co-worker, Varun has explained it in such a simple way that anyone can understand it.
+What is Business Network Definition? The Business Network Definition is the core definition that holds the Hyperledger Composer’s programming model.</description>
+    </item>
+    
+  </channel>
+</rss>
