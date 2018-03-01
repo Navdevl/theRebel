@@ -4,12 +4,22 @@ title = "About"
 hidden = true
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ullam earum dolorum! Sed, perspiciatis.
+# This is Naveen, yo.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<p>
+I am a old-fashioned guy who loves to collect quotes, get excited on sappy-things like friend calling at 12'o clock on your birthday and so on. Now you can imagine a hint of my character, right? Cool.
 
-***
+# Favorite TV shows.
+<p> 
+**Breaking Bad** Likes Jesse Pinkman more than W.W. Still W.W is a kickass character.
 
-### Lorem ipsum dolor.
+**F.R.I.E.N.D.S** Chandler is the best. Meh.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dicta corporis ad inventore itaque impedit dolor atque amet exercitationem! Veniam qui voluptas maiores vel laudantium necessitatibus, velit ducimus! Iste hic facere, accusamus fugiat enim facilis.
+**Game of Thrones** Who doesn't like it, bruh.
+
+```I'll update this when I am bored. Bugs to fix.```
+
+# How to initiate a conversation with me.?
+<p> 
+**One Rule**. Don't talk about Kardashian or anything stupid. Yes Kardashian are stupid.
+

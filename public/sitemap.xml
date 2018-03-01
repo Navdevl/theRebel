@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://navdevl.xyz/posts/writing-a-small-chat-bot-for-beginners/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://navdevl.xyz/posts/writing-your-first-business-model-hyperledger-composer/</loc>
     <lastmod>2017-12-15T00:00:00+00:00</lastmod>
   </url>
@@ -13,6 +18,12 @@
   </url>
   
   <url>
+    <loc>https://navdevl.xyz/tags/beginner/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://navdevl.xyz/tags/blockchain/</loc>
     <lastmod>2017-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -20,6 +31,12 @@
   
   <url>
     <loc>https://navdevl.xyz/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/chatbot/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -43,19 +60,31 @@
   
   <url>
     <loc>https://navdevl.xyz/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://navdevl.xyz/posts/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/python/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://navdevl.xyz/tags/</loc>
-    <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/wit.ai/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

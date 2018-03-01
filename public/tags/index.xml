@@ -6,10 +6,19 @@
     <description>Recent content in Tags on NavDevl</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://navdevl.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Beginner</title>
+      <link>https://navdevl.xyz/tags/beginner/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://navdevl.xyz/tags/beginner/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Blockchain</title>
@@ -17,6 +26,15 @@
       <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://navdevl.xyz/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chatbot</title>
+      <link>https://navdevl.xyz/tags/chatbot/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://navdevl.xyz/tags/chatbot/</guid>
       <description></description>
     </item>
     
@@ -44,6 +62,24 @@
       <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://navdevl.xyz/tags/hyperledger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://navdevl.xyz/tags/python/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://navdevl.xyz/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wit.ai</title>
+      <link>https://navdevl.xyz/tags/wit.ai/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://navdevl.xyz/tags/wit.ai/</guid>
       <description></description>
     </item>
     
