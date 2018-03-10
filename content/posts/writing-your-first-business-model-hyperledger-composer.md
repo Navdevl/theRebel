@@ -15,8 +15,6 @@ description: This article focuses on creating a simple business model that helps
 
 This article focuses on creating a simple business model that helps you with visualizing the abstract nature of Hyperledger Composer’s language.
 
-If you are confused on where to start or wasted a lot of your time in getting started with Hyperledger Composer, you should read this article. My co-worker, Varun has explained it in such a simple way that anyone can understand it.
-
 ## What is Business Network Definition?
 The Business Network Definition is the core definition that holds the Hyperledger Composer’s programming model. In short, it controls the model definition, the relationship between them, the access control over them and the actions that could be performed on/with them.
 
