@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://navdevl.xyz/posts/cors-i-need-to-bypass/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://navdevl.xyz/posts/writing-a-small-chat-bot-for-beginners/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
@@ -14,6 +19,11 @@
   
   <url>
     <loc>https://navdevl.xyz/about/</loc>
+    <lastmod>1996-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/projects/</loc>
     <lastmod>1996-03-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -47,8 +57,20 @@
   </url>
   
   <url>
+    <loc>https://navdevl.xyz/tags/cors/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://navdevl.xyz/tags/fabric/</loc>
     <lastmod>2017-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/hack/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,13 +82,19 @@
   
   <url>
     <loc>https://navdevl.xyz/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/origin/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://navdevl.xyz/posts/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -79,6 +107,12 @@
   <url>
     <loc>https://navdevl.xyz/tags/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://navdevl.xyz/tags/trick/</loc>
+    <lastmod>2018-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

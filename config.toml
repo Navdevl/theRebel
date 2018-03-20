@@ -2,7 +2,6 @@
 baseurl = "https://navdevl.xyz/"
 languageCode = "en"
 title = "NavDevl"
-theme = "hugo-theme-cactus-plus"
 googleAnalytics = "UA-111593067-1"
 # Set the value to true if your site include CJK (Chinese, Japanese, and Korean languages) characters
 hasCJKLanguage = false
@@ -46,6 +45,7 @@ hasCJKLanguage = false
   # Navigation links
   home = "Home"
   about = "About"
+  project = "Projects"
   archive = "Articles"
   subscribe = "Contact"
 

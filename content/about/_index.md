@@ -21,5 +21,5 @@ I am a old-fashioned guy who loves to collect quotes, get excited on sappy-thing
 
 # How to initiate a conversation with me.?
 <p> 
-**One Rule**. Don't talk about Kardashian or anything stupid. Yes Kardashian are stupid.
+**One Rule**. Don't talk about Kardashians or anything stupid. Yes Kardashians are stupid.
 

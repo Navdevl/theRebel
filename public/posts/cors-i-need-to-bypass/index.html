@@ -34,7 +34,7 @@ ga('send', 'pageview');
     
   
   
-  <meta name="twitter:title" content="CORS bypass - Funny trick to get through the same-origin-header"/>
+  <meta name="twitter:title" content="CORS bypass - Funny trick to get through the same-origin-header 👻"/>
   <meta name="twitter:description" content="This article explains CORS basics and demonstrates a way to get through few CORS api calls."/>
   
     <meta name="twitter:site" content="@nav_devl"/>
@@ -51,7 +51,7 @@ ga('send', 'pageview');
 		<meta name="author" content="Naveen Honest Raj">
 		<meta name="description" content="You might be dreaming something credible as reality.">
 		<meta name="generator" content="Hugo 0.31" />
-		<title>CORS bypass - Funny trick to get through the same-origin-header &middot; NavDevl</title>
+		<title>CORS bypass - Funny trick to get through the same-origin-header 👻 &middot; NavDevl</title>
 		<link rel="shortcut icon" href="https://navdevl.xyz/images/favicon.ico">
 		<link rel="stylesheet" href="https://navdevl.xyz/css/style.css">
 		<link rel="stylesheet" href="https://navdevl.xyz/css/highlight.css">
@@ -69,8 +69,8 @@ ga('send', 'pageview');
        <nav class="main-nav">
 	
 
-	<a href='https://navdevl.xyz/'>Home</a>
 	<a href='https://navdevl.xyz/posts'>Articles</a>
+	<a href='https://navdevl.xyz/projects'>Projects</a>
 	<a href='https://navdevl.xyz/about'>About</a>
 	
 
@@ -82,12 +82,12 @@ ga('send', 'pageview');
             <article>
                 <header>
                     <h1>
-                        CORS bypass - Funny trick to get through the same-origin-header
+                        CORS bypass - Funny trick to get through the same-origin-header 👻
                     </h1>
                     <h2 class="headline">
-                    Dec 15, 2017
-                    · 1116 words
-                    · 6 minute read
+                    Mar 10, 2018
+                    · 807 words
+                    · 4 minute read
                       <span class="tags">
                       
                       
@@ -110,14 +110,11 @@ ga('send', 'pageview');
                     <div id="toc">
                       <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li><a href="#what-is-business-network-definition">What is Business Network Definition?</a></li>
-<li><a href="#understanding-the-key-concepts-of-a-model">Understanding The Key Concepts Of A Model</a></li>
-<li><a href="#resources-are-everything-in-a-cto-file">Resources Are Everything In A CTO File</a></li>
-<li><a href="#the-endless-possibilities-of-the-cto-file">The Endless Possibilities Of The CTO File</a></li>
+<li><a href="#cors-what-and-why">CORS - What and Why ?</a></li>
+<li><a href="#a-technical-scenerio">A Technical Scenerio</a></li>
+<li><a href="#how-do-i-tackle-those-scenerios">How do I tackle those scenerios ?</a></li>
+<li><a href="#our-little-hack-to-bypass-cors-enabled-sites">Our little hack to bypass CORS enabled sites</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
-</ul></li>
 </ul>
 </nav>
                     </div>
@@ -126,146 +123,127 @@ ga('send', 'pageview');
                 <section id="post-body">
                     
 
-<p>If you are confused on where to start or wasted a lot of your time in getting started with Hyperledger Composer, you should read this article. My co-worker, Varun has explained it in such a simple way that anyone can understand it.</p>
+<h1 id="cors-what-and-why">CORS - What and Why ?</h1>
 
-<h2 id="what-is-business-network-definition">What is Business Network Definition?</h2>
+<p>As per <strong>Mozilla&rsquo;s definition</strong>,</p>
 
-<p>The Business Network Definition is the core definition that holds the Hyperledger Composer’s programming model. In short, it controls the model definition, the relationship between them, the access control over them and the actions that could be performed on/with them.</p>
+<blockquote>
+<p>Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to let a user agent gain permission to access selected resources from a server on a different origin (domain) than the site currently in use.</p>
+</blockquote>
 
-<p>BND has three core components :</p>
+<p>It&rsquo;s little technical to understand, right? Let me clue you in with a nice example.</p>
 
-<ol>
-<li>The Model written in .cto files</li>
-<li>The Business Logic written in .js files</li>
-<li>The Access Control Logic written in .acl files</li>
-</ol>
+<p>You are sending a fake-letter to a person <em>&lsquo;X&rsquo;</em> using someone&rsquo;s identity. This &lsquo;X&rsquo; is a genius so he figured out that it was not from the person it is identified as by seeing the signature and the way the letter was sealed. Because he knew that the person used to seal and pin a star sticker to it. This was missing and so &lsquo;X&rsquo; rejected the letter.</p>
 
-<p>(Optional) There is a Query file written in .qry files that help us to query over the persistent DB.</p>
+<p>Exactly, this is our CORS does. It will help us to figure out where the request are sent from.</p>
 
-<p>These three components are easy to maintain and they govern our whole business application on the Composer.</p>
+<h1 id="a-technical-scenerio">A Technical Scenerio</h1>
 
-<p>Let’s see how to write a manageable simple model file that helps anyone understand most of our business logic. We will implement this in the business logic file.</p>
+<p>Let us consider that there is a blogging website <em>example.com</em>. People can write blog posts and like other people blog post. This site also serves an API because there is an mobile app to the site.
+So when our friend &lsquo;MrBlue&rsquo; debugged the website&rsquo;s requests, he saw that whenever he likes other people&rsquo;s post, the request looks like this</p>
 
-<h2 id="understanding-the-key-concepts-of-a-model">Understanding The Key Concepts Of A Model</h2>
+<blockquote>
+<p><strong>POST example.com/post/post_id/like</strong></p>
+</blockquote>
 
-<p>Before writing our own model, let us understand the key concepts of it. In a model file, you will be defining the following,</p>
+<p>And he figured out that there are no CORS-headers passed to it. I told you right. CORS headers are like signatures passed. There will be a preflight call happening before the normal call to make sure of the origin. So it wasn&rsquo;t happening in our example.com blog.</p>
 
-<ol>
-<li>A namespace
-namespace org.skcript.svr</li>
-<li>Resources, which includes
+<p><strong>What was exactly happening, then?</strong> Everytime when the request was handled, the post&rsquo;s like was increased by using the Cookie that identifies our user.</p>
 
-<ol>
-<li>Participants</li>
-<li>Assets</li>
-<li>Transactions</li>
-<li>Events</li>
-</ol></li>
-<li>Optional import statements that are used to inherit or import other model files.</li>
-</ol>
+<p>So, &lsquo;MrBlue&rsquo; wrote a website and whenever someone visits this page, it just makes the post call from his website because example.com doesn&rsquo;t check for origin-policies neither it has CORS enabled.</p>
 
-<h2 id="resources-are-everything-in-a-cto-file">Resources Are Everything In A CTO File</h2>
+<blockquote>
+<p><strong>POST example.com/post/post_id/like</strong></p>
+</blockquote>
 
-<p>A ‘Participant’ denotes the person who does the action (in simple terms). This is to whom the ID is issued and this is the one who performs transactions.</p>
+<p>and gets likes to his post. All he has to do is forward his link to the people whose cookies are in the browser i.e, the people who are logged in.</p>
 
-<p>For example: Consider the example</p>
+<h1 id="how-do-i-tackle-those-scenerios">How do I tackle those scenerios ?</h1>
 
-<pre><code>participant Author identified by id {
-    o Integer id
-    o String name
-    o String email
-    o String specialized_in 
-    o Double age
+<p>Enabling CORS to your web application will always send a preflight-request before every api request. If this preflight request fails, your regualar API call won&rsquo;t take place. This restricts API call happening from any other domains other than the domain it was hosted.</p>
+
+<p>Enabling CORS to your web application differs from application to application.</p>
+
+<p>For a simple Python Flask server, it is enabled by the following snippet.</p>
+
+<pre><code>from flask import Flask
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+</code></pre>
+
+<h1 id="our-little-hack-to-bypass-cors-enabled-sites">Our little hack to bypass CORS enabled sites</h1>
+
+<p>There is this reverse-proxy library that gives you a way to make API calls.</p>
+
+<p><a href="https://github.com/Rob--W/cors-anywhere">Cors Anywhere</a> is a NodeJS proxy which adds CORS headers to the proxied request. You can read more about it&rsquo;s working and architecture in the repository.</p>
+
+<p>I am here to give a clean-small-example to see its working.</p>
+
+<p>Normally if I wanted to get all posts by user &ldquo;MrBlue&rdquo;, I need to ping</p>
+
+<blockquote>
+<p><strong>POST example.com/user/mrblue/posts</strong></p>
+</blockquote>
+
+<p>But now example.com has enabled CORS so I can&rsquo;t get the user&rsquo;s post to be displayed on my site. But I wanted it to be done.
+I wrote a jquery method that get users post from example.com</p>
+
+<p>The normal approach.</p>
+
+<pre><code>function getTasks() {
+  $.ajax({
+      type: &quot;GET&quot;,
+      dataType: &quot;json&quot;,
+      crossDomain: true,
+      beforeSend: setHeader,
+      withCredentials: true,
+      url: 'https://example.com/user/mrblue/posts', 
+      error: function (data) {
+        console.log(&quot;Error. Really?&quot;)
+      },
+      success: function (data) {
+        // Actions to be performed with the data
+      }
+    }
+  );
 }
 </code></pre>
 
-<p>In the above example, we see there’s a participant named <code>Author</code> and the keyword <code>identified by</code> is used to select the primary key. Here, it is <code>id</code> field that acts as a primary key. We will know the wide applications of having this <code>identified by</code> on right field to have an easy and readable access to the model.</p>
+<p>Now when I tried to list the user&rsquo;s post. All I could get is an error. And when I debugged the error, I could see there was a preflight error in console.</p>
 
-<p>The circles are nothing but lower case ‘o’ (The O, yeah ! ).  Composer’s model file has a unique way of representing a new key in their object. But you will get used to it.</p>
+<p><img src="/images/preflight-error.png" alt="Preflight Error" title="Preflight Error" />
+I think you might have to open the image in a new tab to view. It&rsquo;s very small right?</p>
 
-<p>Assets are the resource which our business model has. Considering our above example, <code>Author</code> is a participant, then <code>Post</code> will be the asset that he holds. And we know that every post will always belong to an author. There can never be an asset that won’t belong to an author. This can be done by creating a relationship between our participant and asset. This is easy-peasy because of the CTO’s modeling language.</p>
+<p>So now I <strong>Cors-Anywhere-ed</strong> it. And just changing one line of the code gets it done.</p>
 
-<p>P.S. You should be careful with relationship because it is unidirectional and you can’t do the vice versa which you can do in most of the application frameworks.</p>
-
-<p>Example:</p>
-
-<pre><code>/**
-* An enumerated type
-*/
-enum Category {
-  o AI
-  o BLOCKCHAIN
-  o WEB-DEVELOPMENT
-  o BACKEND
-  o DESIGN
-  o FUN
-}
-
-/**
- * A post asset.
- */
-asset Post identified by id {
-  o String id
-  o String title
-  o Category category
-  o DateTime timestamp
-  --&gt; Author author
-  --&gt; Author coAuthor optional
+<pre><code>function getTasks() {
+  $.ajax({
+      type: &quot;GET&quot;,
+      dataType: &quot;json&quot;,
+      crossDomain: true,
+      beforeSend: setHeader,
+      withCredentials: true,
+      url: 'https://cors-anywhere.herokuapp.com/https://example.com/user/mrblue/posts', 
+      error: function (data) {
+        console.log(&quot;Error. Really?&quot;)
+      },
+      success: function (data) {
+        // Actions to be performed with the data
+      }
+    }
+  );
 }
 </code></pre>
 
-<p>In the above example, as we learned earlier <code>identified by</code> is used with <code>id</code> as primary key which makes sense. Right? Now you can understand.</p>
+<p>I prepended the URL with &ldquo;<a href="https://cors-anywhere.herokuapp.com/&quot;">https://cors-anywhere.herokuapp.com/&quot;</a>. This is cors-anywhere server running in a public domain. You can also clone the repo and run it locally and make some modification to the reverse proxy server as your wish.</p>
 
-<p>But where’s the new thing coming up? No rush. Let’s take it slow.
-Let’s see the <code>Line 21</code> - we see an arrow. Okay. I didn’t write it because it looks good on the code and it’s not a comment too. That’s again our Composer’s modeling language’s weird way of writing relationship. So we should read it as Post belongs to Author. That’s simple. Done.
-In <code>Line 22</code> , we can see there’s a new keyword <code>optional</code>. This helps us avoid mandatory entry to create an asset. This is defined as optional by thinking that there may or may not be a coauthor for a particular post.</p>
+<p>Now when I tried to list the user&rsquo;s post, the response was success and it got displayed. Simple right? Hurraayyy..</p>
 
-<p>Next, why <code>enum</code> ? It’s for managing a neat code. As our articles goal is not only to learn how to write a model but also to write a good one that can be easy to read and update.
-So enum holds the possible values our field can take. So we defined an <code>enum</code> called <code>Category</code> and we gave it all the possible values it can take. Now in <code>Line 19</code> we used it and created a category of <code>enum Category</code> .</p>
+<h1 id="conclusion">Conclusion</h1>
 
-<p>Transactions are the process in which our participants do the operation on assets. Considering our scenario, author creating a post is also a transaction.
-Example:</p>
-
-<pre><code>transaction createPost {
-  --&gt; Author owner
-  o String title
-  o Category category
-}
-</code></pre>
-
-<p>The above transaction definition emphasizes that we are creating a post by pointing out the author of the post. We also provide title and category while creating the post.</p>
-
-<p>P.S: In our next post, we will learn more about the transactions and transaction processor functions.</p>
-
-<p>Events are used to trigger some other third party application. You can write the logic for the event which will help you to send an email about the author’s new post. These events can be used to help you to send emails if and only if you subscribed to the particular author which helps to avoid spam and improves integrity. Events are also defined the same as transactions. The purpose is only different. Used with <code>event</code> keyword for declaration.</p>
-
-<h2 id="the-endless-possibilities-of-the-cto-file">The Endless Possibilities Of The CTO File</h2>
-
-<p>You can still segregate the model declaration by <code>abstract</code>  keyword which won’t create participant or asset in the registry, rather is used to inherit from the other resources.</p>
-
-<p>Example: Considering the same scenario, try to understand the following code</p>
-
-<pre><code>abstract Participant UserInformation identified by name {
-  o String name
-  o String address
-  o String email
-  o Integer age
-}
-
-participant Author identified by id {
-    o Integer id
-    o String specialized_in 
-    o UserInformation user_information
-}
-</code></pre>
-
-<p>We created an <code>abstract</code> participant which holds most information about a user and we inherit and use that in our <code>Author</code> participant. This helps us have a clean model that still maintains Single Responsibility Principle. We can do abstract type for assets and transactions too.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>There are much more magical things like <code>extends</code> that we can do with CTO file. But let’s end it clean and easy here. After you write your first model, you will figure out most of the conventions you might need to follow to have a maintainable code. Wish you a good luck, readers.</p>
-
-<p>If you have any difficulties in writing your own model, feel free to email me at naveen@skcript.com.</p>
+<p>Now I need to figure out a way to steal cookie and to pass it along with the request because default CORS-Anywhere&rsquo;s behavior doesn&rsquo;t sends cookies. If anyout out there did passed the cookie already with this approach, you can comment below. It would be helpful for me as well as for other guys.</p>
 
                 </section>
             </article>

@@ -6,19 +6,21 @@
     <description>Recent content in Cors on NavDevl</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://navdevl.xyz/tags/cors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>CORS bypass - Funny trick to get through the same-origin-header</title>
+      <title>CORS bypass - Funny trick to get through the same-origin-header 👻</title>
       <link>https://navdevl.xyz/posts/cors-i-need-to-bypass/</link>
-      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://navdevl.xyz/posts/cors-i-need-to-bypass/</guid>
-      <description>If you are confused on where to start or wasted a lot of your time in getting started with Hyperledger Composer, you should read this article. My co-worker, Varun has explained it in such a simple way that anyone can understand it.
-What is Business Network Definition? The Business Network Definition is the core definition that holds the Hyperledger Composer’s programming model. In short, it controls the model definition, the relationship between them, the access control over them and the actions that could be performed on/with them.</description>
+      <description>CORS - What and Why ? As per Mozilla&amp;rsquo;s definition,
+ Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to let a user agent gain permission to access selected resources from a server on a different origin (domain) than the site currently in use.
+ It&amp;rsquo;s little technical to understand, right? Let me clue you in with a nice example.
+You are sending a fake-letter to a person &amp;lsquo;X&amp;rsquo; using someone&amp;rsquo;s identity.</description>
     </item>
     
   </channel>
