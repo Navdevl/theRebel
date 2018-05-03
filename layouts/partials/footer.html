@@ -1,15 +1,6 @@
-<footer id="footer">
-    {{ if .Site.Social }}
-        {{ partial "social.html" . }}
-    {{ end }}
-    <p class="small">
-    {{ with .Site.Params.copyright }}
-        {{ . | markdownify }}
-    {{ else }}
-       © Copyright {{ now.Format "2006"}} <i class="fa fa-heart" aria-hidden="true"></i> {{ .Site.Params.Author }}
-    {{ end }}
-    </p>
-    <p class="small">
-    </p>
-
+<footer class="footer">
+  <section class="container">
+    <!-- © {{ .Site.LastChange.Format "2006" }} · Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. -->
+    Site under construction.
+  </section>
 </footer>

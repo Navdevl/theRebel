@@ -4,76 +4,40 @@ languageCode = "en"
 title = "NavDevl"
 googleAnalytics = "UA-111593067-1"
 # Set the value to true if your site include CJK (Chinese, Japanese, and Korean languages) characters
-hasCJKLanguage = false
+languagecode = "en"
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "navdevl-xyz"
 
 [params]
-  author = "Naveen Honest Raj"
-  description = "You might be dreaming something credible as reality."
-  bio = "the laZy maNiac"
+    author = "Naveen Honest Raj"
+    description = "Navdevl's personal website"
+    keywords = "blog,developer,personal"
+    info = "Lead Blockchain Engineer"
 
-  twitter = "nav_devl"
-  facebook = "navdevl"
+[[params.social]]
+    name = "Github"
+    weight = 1
+    url = "https://github.com/NavDevl/"
+[[params.social]]
+    name = "Twitter"
+    weight = 2
+    url = "https://twitter.com/nav_devl/"
+[[params.social]]
+    name = "LinkedIn"
+    weight = 3
+    url = "https://www.linkedin.com/in/naveen-honest-raj-089b08ab/"
 
-  enableRSS = false
-  enableToc = true
-
-  enableDisqus = true
-  disqusShortname = "navdevl-xyz"
-
-
-  enableSummary = true
-  # Set the value to true if use description in post front matter replace content summary
-  useDescriptionReplaceSummary = true
-
-
-  enableGoogleAnalytics = true
-  enableBaiduAnalytics = false
-  # Set the value to your baidu analysis code if you want to use baidu analytics
-#  baiduAnalytics = 'your_baidu_analysis_code'
-
-  enableTwitterCard = true
-  # The url for twitter card image, default is avatar.png in static/images directory
-#  twitterCardImage = ""
-
-  # Add custom assets with their paths relative to the static folder
-  customCSS = []
-  customJS  = []
-
-  # The variables below are optionally too and can be used to
-  # translate or customize each string of the theme.
-
-  # Navigation links
-  home = "Home"
-  about = "About"
-  project = "Projects"
-  archive = "Articles"
-  subscribe = "Contact"
-
-  olderPosts = ""
-  newerPosts = ""
-  copyright = ""
-
-  # show latest posts in single page
-  showLatestPosts = false
-  readMore = ""
-
-  # Share
-  enableShare = true
-  tweet = ""
-  share = ""
-
-  # 404 page
-  title404 = ""
-  subtitle404 = ""
-
-  # Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
-  iconFont = "font-awesome"
-  # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-  socialIconStyle = ""
-
-
-# Add additional social link entries underneath
-[social]
-  facebook-square = "https://www.facebook.com/navdevl"
-  twitter-square = "https://www.twitter.com/nav_devl"
-  github-square = "https://www.github.com/navdevl"
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"
