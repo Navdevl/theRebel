@@ -19,6 +19,7 @@ disqusShortname = "navdevl-xyz"
     description = "Navdevl's personal website"
     keywords = "blog,developer,personal"
     info = "Lead Blockchain Engineer"
+    shorturl = "navdevl.xyz"
 
 [[params.social]]
     name = "Github"

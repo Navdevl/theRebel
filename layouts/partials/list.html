@@ -3,7 +3,11 @@
   <ul>
     {{ range .Paginator.Pages }}
     <li>
-      <span>{{ .Date.Format "January 2, 2006" }}</span><a href="{{ .URL }}">{{ .Title }}</a>
+      {{ if isset .Params "link" }}
+        <span>{{ .Date.Format "January 2, 2006" }}</span><a href="{{ .Params.link }}" target="_blank">{{ .Title }} </a> <small>({{ .Params.domain }})</small>
+      {{ else }}
+        <span>{{ .Date.Format "January 2, 2006" }}</span><a href="{{ .URL }}" target="_blank">{{ .Title }} </a> <small>({{ .Site.Params.ShortURL }})</small>
+      {{ end }}
     </li>
     {{ end }}
   </ul>
