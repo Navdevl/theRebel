@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on NavDevl</title>
+    <link>https://navdevl.xyz/posts/</link>
+    <description>Recent content in Posts on NavDevl</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://navdevl.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Writing CNN from Scratch</title>
+      <link>https://navdevl.xyz/posts/writing-cnn-from-scratch/</link>
+      <pubDate>Sun, 30 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://navdevl.xyz/posts/writing-cnn-from-scratch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Building your own recommendation engine</title>
+      <link>https://navdevl.xyz/posts/driven-by-code/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://navdevl.xyz/posts/driven-by-code/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

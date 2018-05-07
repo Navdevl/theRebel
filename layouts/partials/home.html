@@ -5,7 +5,7 @@
     {{ with .Site.Params.social }}
     <ul>
       {{ range sort .}}
-      <li><a href="{{ .url }}">{{ .name }}</a></li>
+      <li><a href="{{ .url }}"><img class="link" src="{{ .image }}"></a></li>
       {{ end }}
     </ul>
     {{ end }}

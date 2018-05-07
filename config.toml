@@ -25,14 +25,17 @@ disqusShortname = "navdevl-xyz"
     name = "Github"
     weight = 1
     url = "https://github.com/NavDevl/"
+    image = "images/GitHub-Mark-64px.png"
 [[params.social]]
     name = "Twitter"
     weight = 2
     url = "https://twitter.com/nav_devl/"
+    image = "images/rsz_twitter_logo_blue.png"
 [[params.social]]
     name = "LinkedIn"
     weight = 3
     url = "https://www.linkedin.com/in/naveen-honest-raj-089b08ab/"
+    image = "images/In-2CRev-66px-R.png"
 
 [[menu.main]]
     name = "Blog"
